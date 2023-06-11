@@ -1,0 +1,26 @@
+:root {
+    /* CSS HEX */
+    --tropical-indigo: #9998E9ff;
+    --space-cadet: #1E274Dff;
+    --oxford-blue: #111931ff;
+    --royal-blue-web-color: #4D73DAff;
+    --dark-purple: #2A203Aff;
+
+    /* CSS HSL */
+    --tropical-indigo: hsla(241, 65%, 75%, 1);
+    --space-cadet: hsla(229, 44%, 21%, 1);
+    --oxford-blue: hsla(225, 48%, 13%, 1);
+    --royal-blue-web-color: hsla(224, 66%, 58%, 1);
+    --dark-purple: hsla(263, 29%, 18%, 1);
+
+    /* SCSS Gradient */
+    --gradient-top: linear-gradient(0deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-right: linear-gradient(90deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-bottom: linear-gradient(180deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-left: linear-gradient(270deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-top-right: linear-gradient(45deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-bottom-right: linear-gradient(135deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-top-left: linear-gradient(225deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-bottom-left: linear-gradient(315deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-radial: radial-gradient(#9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+}

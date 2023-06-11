@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: inherit;
+}
+
+:root {
+    /* CSS HEX */
+    --tropical-indigo: #9998E9ff;
+    --space-cadet: #1E274Dff;
+    --oxford-blue: #111931ff;
+    --royal-blue-web-color: #4d73da;
+    --dark-purple: #2a203a;
+
+    --font-color: whitesmoke;
+
+    /* CSS HSL */
+    --tropical-indigo: hsla(241, 65%, 75%, 1);
+    --space-cadet: hsla(229, 44%, 21%, 1);
+    --oxford-blue: hsla(225, 48%, 13%, 1);
+    --royal-blue-web-color: hsla(224, 66%, 58%, 1);
+    --dark-purple: hsla(263, 29%, 18%, 1);
+
+    /* SCSS Gradient */
+    --gradient-top: linear-gradient(0deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-right: linear-gradient(90deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-bottom: linear-gradient(180deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-left: linear-gradient(270deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-top-right: linear-gradient(45deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-bottom-right: linear-gradient(135deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-top-left: linear-gradient(225deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-bottom-left: linear-gradient(315deg, #9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --gradient-radial: radial-gradient(#9998E9ff, #1E274Dff, #111931ff, #4D73DAff, #2A203Aff);
+    --fade-gradient: linear-gradient(to bottom, rgba(153, 152, 233, 0.8), rgba(42, 32, 58, 0.8));
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: var(--oxford-blue);
+    color: var(--font-color);
+    font-family: 'Inter';
+    scroll-behavior: smooth;
+}
+
+/* HEADING */
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    padding: 1.6rem 0;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(.2rem);
+}
+
+.logo {
+    border-radius: 50%;
+    background-color: var(--font-color);
+    width: 4.5vw;
+    height: 4.5vw;
+}
+
+.navigation {
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+    color: var(--font-color);
+    transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navigation__link:hover {
+    text-decoration: underline;
+}
+
+.navigation__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
+    width: 25vw
+}
+
+/* MAIN */
+
+.main {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    background-image:
+        var(--fade-gradient),    
+        url(../imgs/hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    place-items: center;
+}
+
+.hero__txt-wrapper {
+    text-align: center;
+}
+
+.hero__welcome-txt {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(1vw + 6rem);
+}
+
+.hero__p {
+    font-size: 'Open Sans';
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.8rem, 2rem);
+}
+
+/* INFO */
+
+.info article {
+    min-height: 100vh;
+    width: 100%;
+    padding: 8.4rem;
+}
+
+.info :not(article) {
+    opacity: 0;
+    transition: all .8s ease-in;
+}
+
+.info h2 {
+    font-size: calc(1vw + 4rem);
+    transition: all .2s ease-in;
+}
+
+.info article:nth-child(even) {
+    background-color: var(--space-cadet);
+}
+
+/* OBSERVER */
+.show {
+    opacity: 1;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-80rem);
+    }
+
+    75% {
+        transform: translateX(8rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
